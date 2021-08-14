@@ -2,7 +2,7 @@
 title: "<span style='font-family:Menlo, Courier, monospace'>=nil;</span> Foundation Blog"
 tagline: ''
 description: ''
-baseurl: ''
+baseurl: '/blog'
 url: https://blog.nil.foundation
 
 # Site configurations
