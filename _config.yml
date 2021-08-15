@@ -2,8 +2,8 @@
 title: "<span style='font-family:Menlo, Courier, monospace'>=nil;</span> Foundation Blog"
 tagline: ''
 description: ''
-baseurl: '/blog'
-url: https://blog.nil.foundation
+baseurl: ''
+url: 'urickon.github.io'
 
 # Site configurations
 plugins:
