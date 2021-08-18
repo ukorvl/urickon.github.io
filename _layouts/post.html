@@ -34,28 +34,32 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="row">
+                <div class="row">
                     <div class="col-lg-12">
                     <div class="page-header">
                     </div>
                     <div class="bs-component">
                     <div class="jumbotron">
-                    <form method="POST" action="https://api.staticman.net/v3/entry/github/eduardoboucas/staticman/gh-pages/comments">
+                    <h5>Please, left your comment here</h5>
+                    <form
+                        method="POST"
+                        action="https://api.staticman.net/v3/entry/github/eduardoboucas/staticman/gh-pages/comments"
+                        class="form-for-comments"
+                    >
                     <input name="options[redirect]" type="hidden" value="https://my-site.com">
                     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-                    <label><input name="fields[name]"
+                    <label><input name="fields[name]" class="comment-textfield"
                     type="text">Name</label><br>
-                    <label><input name="fields[email]"
-                    type="email">E-mail</label><br>
                     <label><textarea
-                    name="fields[message]"></textarea>Message</label><br>
-
-                    <button type="submit">Go!</button>
+                    name="fields[message]" class="comment-textfield"></textarea>Message</label><br>
+                    <div class="button-box">
+                        <button type="submit">Go!</button>
+                    </div>
                     </form>
                     </div>
                     </div>
                     </div>
-                    </div>-->
+                    </div>
 
 
                     {% include footer.html %}

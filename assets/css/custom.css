@@ -347,3 +347,54 @@ pre {
     left: auto !important;
     right: 0px;
 }
+
+.comment-textfield {
+    width: 300px;
+    margin-right: 16px;
+    background: #d1d1d1;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+textarea.comment-textfield {
+    height: 100px;
+}
+
+.comment-textfield:hover,
+.comment-textfield:focus
+{
+    background: #F5F2F1;
+}
+
+.button-box {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-box > button {
+    width: 100px;
+    background: #d1d1d1;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+.button-box > button:hover {
+    background: #F5F2F1;
+}
+
+button:hover, button:focus {
+    outline: none;
+}
+
+.form-for-comments {
+    margin-top: 20px;
+}
+
+input, textarea {outline:none;}
+input:active, textarea:active, button:active {outline:none;}
+:focus {outline:none;}
+
+::selection {
+	background: #343434;
+}
