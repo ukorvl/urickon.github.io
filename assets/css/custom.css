@@ -131,11 +131,16 @@ pre {
 }
 
 /*custom*/
-.bs-component {
+.bs-component-blog {
     position: relative;
     font-size: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.bs-component {
+    position: relative;
+    font-size: 1rem;
 }
 
 .bs-component+.bs-component {
@@ -389,8 +394,17 @@ textarea.comment-textfield {
     justify-content: center;
 }
 
+.navbar-brand:hover {
+    background: #907F8F;
+}
+.navbar-brand {
+    padding: 10px!important;
+    transition: none!important;
+}
+
 .button-box > button {
     width: 150px;
+    margin-top: 16px;
     background: #d1d1d1;
     transition: 0.2s;
     border: none;
@@ -428,7 +442,6 @@ input:active, textarea:active, button:active {outline:none;}
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 0 15px;
 }
 .description-blog {
     width: 70%;
@@ -441,24 +454,29 @@ input:active, textarea:active, button:active {outline:none;}
 .comments {
     margin-top: 48px;
 }
-.page-header {
+.page-header-blog {
     margin: 24px 0;
 }
-input::placeholder, textarea::placeholder { font-size: 100%; }
-
-@media (min-width:576px){
-    .jumbotron {
-        width: 70%;
-        padding: 2rem 2rem;
-    }
-    .container {
-        display: flex;
-        align-items: center;
-        flex-flow: column nowrap;
-    }
-    .page-header {
-        padding-bottom: 0;
-    }
+input::placeholder, textarea::placeholder {
+    font-size: 100%;
+    color: #222222;
+}
+.jumbotron-blog {
+    width: 70%;
+    padding: 2rem 2rem;
+}
+.container-blog {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.page-header-blog {
+    padding-bottom: 0;
+}
+.container-nav,
+.navbar-blog {
+    width: 100%;
+    max-width: 3000px;
 }
 
 /* custom scroll */
