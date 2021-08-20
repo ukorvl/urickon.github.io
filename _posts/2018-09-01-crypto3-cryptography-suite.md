@@ -7,7 +7,7 @@ author: Mikhail Komarov
 tags: crypto3 cryptography cpp
 ---
 
-# =nil; Foundation Cryptography Library (libcrypto3)
+## =nil; Foundation Cryptography Library (libcrypto3)
 [![Build Status](https://travis-ci.com/nemo1369/crypto3.svg?token=DHGZQ8ocJtbnXsTs61qE&branch=master)](https://travis-ci.com/nemo1369/crypto3)
 [![Coverage Status](https://coveralls.io/repos/github/NilFoundation/crypto3/badge.svg?branch=master)](https://coveralls.io/github/NilFoundation/crypto3?branch=master)
 
