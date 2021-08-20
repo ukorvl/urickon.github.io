@@ -130,9 +130,12 @@ pre {
     width: 100%
 }
 
+/*custom*/
 .bs-component {
     position: relative;
-    font-size: 1rem
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .bs-component+.bs-component {
@@ -349,15 +352,29 @@ pre {
 }
 
 .comment-textfield {
-    width: 300px;
+    width: 100%;
     margin-right: 16px;
     background: #d1d1d1;
     transition: 0.2s;
     border-radius: 4px;
 }
 
+label {
+    width: 80%;
+    font-size: 80%;
+}
+.form-title {
+    margin-left: 10%;
+}
+
+.comments-input-container {
+    display: flex;
+    justify-content: center;
+}
+
 textarea.comment-textfield {
     height: 100px;
+    resize: none;
 }
 
 .comment-textfield:hover,
@@ -367,15 +384,16 @@ textarea.comment-textfield {
 }
 
 .button-box {
-    width: 300px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .button-box > button {
-    width: 100px;
+    width: 150px;
     background: #d1d1d1;
     transition: 0.2s;
+    border: none;
     border-radius: 4px;
 }
 
@@ -398,3 +416,70 @@ input:active, textarea:active, button:active {outline:none;}
 ::selection {
 	background: #343434;
 }
+
+.button-disabled {
+    background: #907F8F!important;
+}
+.row-blog {
+    justify-content: center;
+    width: 100%;
+}
+.col-blog {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0 15px;
+}
+.description-blog {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+}
+.lead-blog, .col-blog > h3 {
+    color:#eaf1f1;
+}
+.comments {
+    margin-top: 48px;
+}
+.page-header {
+    margin: 24px 0;
+}
+input::placeholder, textarea::placeholder { font-size: 100%; }
+
+@media (min-width:576px){
+    .jumbotron {
+        width: 70%;
+        padding: 2rem 2rem;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+    .page-header {
+        padding-bottom: 0;
+    }
+}
+
+/* custom scroll */
+html::-webkit-scrollbar-track
+{
+	background-color: #907F8F;
+}
+html::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #222222;
+}
+html::-webkit-scrollbar-thumb
+{
+	background-color: #343434;
+}
+html::-webkit-scrollbar-thumb:hover
+{
+	background-color: #151515;
+}
+/*
+Author:MANOJ M;
+Link :https://codepen.io/manoj-m-01
+*/

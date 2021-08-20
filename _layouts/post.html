@@ -6,14 +6,17 @@
         <div class="container">
 
             <div class="page-header">
-                <div class="row">
-                    <div class="col-lg-8 col-md-7 col-sm-6">
-                        <h3>{{ page.title }}</h3>
-
-                        {% if page.description %}
-                        <p class="lead">{{ page.description }}</p>
-                        {% endif %}
-                        <p class="lead">Written by {{ page.author }} on {{ page.date | date_to_string }}</p>
+                <h3>{{ page.title }}</h3>
+            </div>
+            <div class="row-blog">
+                <div class="col-blog">
+                    {% if page.description %}
+                    <div class="description-blog">
+                        <p class="lead lead-blog">{{ page.description }}</p>
+                    </div>
+                    {% endif %}
+                    <div class="description-blog">
+                        <p class="lead lead-blog">Written by {{ page.author }} on {{ page.date | date_to_string }}</p>
                     </div>
                 </div>
             </div>
@@ -25,8 +28,6 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="page-header">
-                        </div>
                         <div class="bs-component">
                             <div class="jumbotron">		
                                 <p class="lead">{{ content }}</p>
@@ -34,37 +35,68 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                    <div class="page-header">
-                    </div>
+                <div class="row-blog">
+                    <div>
                     <div class="bs-component">
                     <div class="jumbotron">
-                    <h5>Please, left your comment here</h5>
+                    <div class="form-title">
+                        <h5>Please, leave your comment here</h5>
+                    </div>
                     <form
                         method="POST"
                         action="https://api.staticman.net/v3/entry/github/eduardoboucas/staticman/gh-pages/comments"
                         class="form-for-comments"
                     >
-                    <input name="options[redirect]" type="hidden" value="https://my-site.com">
-                    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-                    <label><input name="fields[name]" class="comment-textfield"
-                    type="text">Name</label><br>
-                    <label><textarea
-                    name="fields[message]" class="comment-textfield"></textarea>Message</label><br>
-                    <div class="button-box">
-                        <button type="submit">Go!</button>
-                    </div>
+                        <input
+                            name="options[redirect]"
+                            type="hidden"
+                            value="https://my-site.com"
+                        >
+                        <input
+                            name="options[slug]"
+                            type="hidden"
+                            value="{{ page.slug }}"
+                        >
+                        <div class="comments-input-container">
+                            <label>
+                                Name
+                                <input
+                                    name="fields[name]"
+                                    class="comment-textfield"
+                                    id="name"
+                                    type="text"
+                                    placeholder="Enter your name."
+                                >
+                            </label>
+                        </div>
+                        <div class="comments-input-container">
+                            <label>
+                                Message
+                                <textarea
+                                    name="fields[message]"
+                                    class="comment-textfield"
+                                    id="message"
+                                    placeholder="Leave your comment here."
+                                ></textarea>
+                            </label>
+                        </div>
+                        <div class="button-box">
+                            <button id="sbtBtn" type="submit">Go!</button>
+                        </div>
                     </form>
+                    <div class="comments">
+                        Here will be your comments...
                     </div>
                     </div>
                     </div>
                     </div>
+                </div>
 
 
                     {% include footer.html %}
 
         </div>
+        <script src="{{site.baseurl}}/assets/js/form.js"></script>
         <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
         <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
     </body>
