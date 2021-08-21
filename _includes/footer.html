@@ -1,17 +1,15 @@
-<footer id="footer">
-    <div class="row">
-        <div class="col-lg-12">
-
-            <ul class="list-unstyled">
-                <li class="float-lg-right"><a href="#top">Back to top</a></li>			  
-
-                {% for item in site.contact %}
-                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
-                {% endfor %}
-
-            </ul>
-            <!--<p>&copy <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">CC BY-NC-ND 4.0 International license</a> by {{ site.author }}</p>-->
+<footer id="footer" class="footer{% if include.post %} footer-blog{% endif %}">
+    <div class="row-blog">
+        <div class="footer__list-container">
+            <div>
+                <a href="#top">Back to top</a>
+            </div>			  
+            {% for item in site.contact %}
+            <div>
+                <a href="{{ item.link }}">{{ item.title }}</a>
+            </div>
+            {% endfor %}
         </div>
+            <!--<p>&copy <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">CC BY-NC-ND 4.0 International license</a> by {{ site.author }}</p>-->
     </div>
-
 </footer>

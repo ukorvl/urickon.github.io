@@ -9,13 +9,9 @@ const inputs = document.querySelectorAll('.comment-textfield');
 
 inputs.forEach(node => {
   node.addEventListener('keyup', () => {
-    inputs.forEach(input => {
-      if (!input.value) {
-        if (!submitButton.classList.contains('button-disabled')) submitButton.classList.add('button-disabled');
-        return
-      }
-      submitButton.classList.remove('button-disabled');
-    })
+    [...inputs].some(input => input.value === '')
+      ? submitButton.classList.add('button-disabled')
+      : submitButton.classList.remove('button-disabled');
   })
 })
 

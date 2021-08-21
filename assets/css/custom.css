@@ -478,6 +478,46 @@ input::placeholder, textarea::placeholder {
     width: 100%;
     max-width: 3000px;
 }
+.footer__list-container {
+    display: flex;
+}
+.footer__list-container > div {
+    margin: 4px 16px;
+}
+
+@media (max-width: 767px) {
+    #footer {
+        width: 100%;
+        margin: 0 0 2em;
+    }
+    .footer-blog {
+        width: 80%;
+    }
+    .container-nav {
+        margin: 0 auto!important;
+    }
+    .jumbotron-blog {
+        width: 100%;
+    }
+    label {
+        width: 100%;
+    }
+    body {
+        padding-top: 90px;
+    }
+    .footer__list-container {
+        flex-direction: column;
+    }
+    .footer__list-container > div {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+body, html {
+    box-sizing: border-box;
+}
 
 /* custom scroll */
 html::-webkit-scrollbar-track
