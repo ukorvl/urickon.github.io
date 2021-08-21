@@ -444,7 +444,7 @@ input:active, textarea:active, button:active {outline:none;}
     align-items: center;
 }
 .description-blog {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: flex-start;
 }
@@ -462,7 +462,7 @@ input::placeholder, textarea::placeholder {
     color: #222222;
 }
 .jumbotron-blog {
-    width: 70%;
+    width: 80%;
     padding: 2rem 2rem;
 }
 .container-blog {
