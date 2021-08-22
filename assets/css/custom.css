@@ -267,7 +267,7 @@ pre {
 
 .section-preview .preview {
     margin-bottom: 4em;
-    background-color: #eaf1f1
+    background-color: #eaf1f1;
 }
 
 .section-preview .preview img {
@@ -359,9 +359,11 @@ pre {
 .comment-textfield {
     width: 100%;
     margin-right: 16px;
-    background: #d1d1d1;
+    background: #343434;
     transition: 0.2s;
     border-radius: 4px;
+    border: none;
+    color: #907F8F;
 }
 
 label {
@@ -385,7 +387,12 @@ textarea.comment-textfield {
 .comment-textfield:hover,
 .comment-textfield:focus
 {
-    background: #F5F2F1;
+    box-shadow:0 0 0.75em #eaf1f1;
+}
+
+.button-box > button:hover
+{
+    box-shadow:0 0 0.75em #907F8F;
 }
 
 .button-box {
@@ -459,7 +466,7 @@ input:active, textarea:active, button:active {outline:none;}
 }
 input::placeholder, textarea::placeholder {
     font-size: 100%;
-    color: #222222;
+    color: #907F8F;
 }
 .jumbotron-blog {
     width: 80%;

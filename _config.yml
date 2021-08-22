@@ -140,3 +140,5 @@ autopages:
     slugify:
       mode: 'default'   # :tag is slugified.
       case: true
+
+staticman_url: http://157.90.126.247/v2/entry/Urickon/urickon.github.io/master/comments
