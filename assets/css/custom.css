@@ -368,7 +368,11 @@ pre {
 
 label {
     width: 80%;
-    font-size: 80%;
+    font-size: 100%;
+    transition: 0.2s;
+}
+label:focus-within {
+    color: #ffffff;
 }
 .form-title {
     margin-left: 10%;
