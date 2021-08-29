@@ -8,7 +8,7 @@ url: 'urickon.github.io'
 # Site configurations
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v3
+  - jekyll-paginate-v2
 markdown: kramdown
 
 # About/contact

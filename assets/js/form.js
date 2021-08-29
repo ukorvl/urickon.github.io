@@ -7,11 +7,17 @@ submitButton.classList.add('button-disabled');
 
 const inputs = document.querySelectorAll('.comment-textfield');
 
+const checkInputs = () => {
+  [...inputs].some(input => input.value === '')
+    ? submitButton.classList.add('button-disabled')
+    : submitButton.classList.remove('button-disabled');
+}
+
+checkInputs();
+
 inputs.forEach(node => {
   node.addEventListener('keyup', () => {
-    [...inputs].some(input => input.value === '')
-      ? submitButton.classList.add('button-disabled')
-      : submitButton.classList.remove('button-disabled');
+    checkInputs();
   })
 })
 
