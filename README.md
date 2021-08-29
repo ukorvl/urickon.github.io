@@ -13,28 +13,3 @@ A jekyll blog theme powered by bootstrap,it's minimal and resopnsive & don't for
    * localhost or according to your folder or pc configurations.
 5. Change the `_config.yml` file according to you.
 6. Upload the files on your repository and :sunglasses: enjoy.
-
-## Demo
-
-- https://www.sharad.cf/bootblog
-
-# Preview
-
-## HOME PAGE
-![Home page](https://github.com/sharadcodes/bootblog/raw/master/screenshots/home.png)
-## BLOG PAGE
-![Blog page](https://github.com/sharadcodes/bootblog/raw/master/screenshots/blog.png)
-## BLOG PAGE IN MOBILE
-![Blog page](https://github.com/sharadcodes/bootblog/raw/master/screenshots/mobile-1.png)
-## POST EXAMPLE IN MOBILE
-![Sampe post](https://github.com/sharadcodes/bootblog/raw/master/screenshots/mobile-2.png)
-## POST EXAMPLE
-![Sampe post](https://github.com/sharadcodes/bootblog/raw/master/screenshots/post.png)
-## PORTFOLIO PAGE
-![Portfolio](https://github.com/sharadcodes/bootblog/raw/master/screenshots/portfolio.png)
-## ABOUT PAGE
-![About](https://github.com/sharadcodes/bootblog/raw/master/screenshots/about.png)
-## 404 Custom page
-![404 page](https://github.com/sharadcodes/bootblog/raw/master/screenshots/404.png)
-## 2nd LEVEL MENU IN NAVIGATION BAR
-![Navbar](https://github.com/sharadcodes/bootblog/raw/master/screenshots/second-level-menu-open.png)
