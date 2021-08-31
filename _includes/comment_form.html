@@ -24,18 +24,18 @@
       type="hidden"
       value="{{ page.slug }}"
   >
+  <div class="comment-form-title">
+    <h2>Add Comment<small>
+      <a
+        rel="nofollow"
+        id="cancel-comment-reply-link"
+        href="{{ page.url | absolute_url }}#respond"
+        style="display:none;">
+        &nbsp;(cancel reply)&nbsp;
+      </a>
+    </small></h2>
+  </div>
   <div class="comments-input-container">
-    <div class="comment-form-title">
-      <h2>Add Comment<small>
-        <a
-          rel="nofollow"
-          id="cancel-comment-reply-link"
-          href="{{ page.url | absolute_url }}#respond"
-          style="display:none;">
-          &nbsp;(cancel reply)&nbsp;
-        </a>
-      </small></h2>
-    </div>
     <label>
         Name <small>(required)</small>
         <input

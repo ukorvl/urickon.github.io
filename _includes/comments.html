@@ -1,4 +1,7 @@
 <section class="comments" id="comment-section">
+  <div id="respond" class="comment__new">
+    {% include comment_form.html %}
+  </div>
   {% if site.data.comments[page.slug] %}
   <!-- Existing comments -->
   <div class="comments__existing">
@@ -16,7 +19,4 @@
   </div>
   {% endif %}
 
-  <div id="respond" class="comment__new">
-    {% include comment_form.html %}
-  </div>
 </section>

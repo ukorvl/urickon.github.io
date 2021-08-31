@@ -432,6 +432,7 @@ button:hover, button:focus {
 
 .form-for-comments {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 input, textarea {outline:none;}
