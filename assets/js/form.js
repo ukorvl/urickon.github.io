@@ -24,3 +24,17 @@ inputs.forEach(node => {
 submitButton.addEventListener('click', (e) => {
   inputs.forEach(input => !input.value && e.preventDefault());
 });
+
+
+/** Onsubmit */
+function processForm(e) {
+  console.log('submit');
+  inputs.forEach(input => input.value = '')
+};
+
+const form = document.getElementById('form');
+if (form.attachEvent) {
+  form.attachEvent("submit", processForm);
+} else {
+  form.addEventListener("submit", processForm);
+}
