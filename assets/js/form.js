@@ -42,6 +42,8 @@ if (form.attachEvent) {
 };
 
 function correctPermalink () {
-  window.scrollBy(0, -74);
-  console.log('correctPermalink');
+  setTimeout(() => {
+    window.scrollBy(0, -74);
+    console.log('correctPermalink');
+  })
 }
