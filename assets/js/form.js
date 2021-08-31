@@ -4,6 +4,7 @@ const nameInput = document.querySelector('#name');
 const messageInput = document.querySelector('#message');
 const submitButton = document.querySelector('#sbtBtn');
 submitButton.classList.add('button-disabled');
+let processingRequest = false;
 
 const inputs = document.querySelectorAll('.comment-textfield');
 
@@ -22,6 +23,10 @@ inputs.forEach(node => {
 })
 
 submitButton.addEventListener('click', (e) => {
+  if (processingRequest) {
+    e.preventDefault();
+    return;
+  }
   inputs.forEach(input => !input.value && e.preventDefault());
 });
 
@@ -29,7 +34,9 @@ submitButton.addEventListener('click', (e) => {
 /** Onsubmit */
 function processForm(e) {
   console.log('submit');
-  inputs.forEach(input => input.value = '')
+  submitButton.classList.add('button-disabled')
+  processingRequest = true;
+  // inputs.forEach(input => input.value = '')
 };
 
 const form = document.getElementById('form');
