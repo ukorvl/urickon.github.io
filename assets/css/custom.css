@@ -436,6 +436,7 @@ button:hover, button:focus {
 }
 
 input, textarea {outline:none;}
+input, textarea ::selection { background: #151515; }
 input:active, textarea:active, button:active {outline:none;}
 :focus {outline:none;}
 
@@ -497,7 +498,8 @@ input::placeholder, textarea::placeholder {
     margin: 4px 16px;
 }
 .comment-form-title {
-    margin-bottom: 32px;
+    margin-bottom: 12px;
+    margin-left: 10%;
 }
 
 @media (max-width: 767px) {
