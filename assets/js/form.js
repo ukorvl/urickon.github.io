@@ -45,5 +45,5 @@ function correctPermalink () {
   setTimeout(() => {
     window.scrollBy(0, -74);
     console.log('correctPermalink');
-  })
+  }, 1000)
 }
