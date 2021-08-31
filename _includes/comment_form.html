@@ -1,0 +1,74 @@
+<form
+  method="post"
+  action="{{ site.staticman_url }}"
+  class="form-for-comments"
+>
+  <input
+    type="hidden"
+    name="options[origin]"
+    value="{{ page.url | absolute_url }}"
+  >
+  <input
+    type="hidden"
+    name="options[parent]"
+    value="{{ page.url | absolute_url }}"
+  >
+  <input
+      type="hidden"
+      id="comment-parent"
+      name="fields[replying_to_uid]"
+      value=""
+  >
+  <input
+      name="options[slug]"
+      type="hidden"
+      value="{{ page.slug }}"
+  >
+  <div class="comments-input-container">
+    <div class="comment-form-title">
+      <h2>Add Comment<small>
+        <a
+          rel="nofollow"
+          id="cancel-comment-reply-link"
+          href="{{ page.url | absolute_url }}#respond"
+          style="display:none;">
+          &nbsp;(cancel reply)&nbsp;
+        </a>
+      </small></h2>
+    </div>
+    <label>
+        Name <small>(required)</small>
+        <input
+          name="fields[name]"
+          class="comment-textfield"
+          id="name"
+          type="text"
+          placeholder="Enter your name."
+        >
+    </label>
+  </div>
+  <div class="comments-input-container">
+    <label>
+        Message <small>(required)</small>
+        <textarea
+          name="fields[message]"
+          class="comment-textfield"
+          id="message"
+          placeholder="Leave your comment here (markdown accepted)."
+        ></textarea>
+    </label>
+  </div>
+  <div class="button-box">
+    <button id="sbtBtn" type="submit">Go!</button>
+  </div>
+</form>
+
+<article class="modal mdl-card mdl-shadow--2dp">
+  <div>
+    <h3 class="modal-title js-modal-title"></h3>
+  </div>
+  <div class="mdl-card__supporting-text js-modal-text"></div>
+  <div class="mdl-card__actions mdl-card--border">
+    <button class="button mdl-button--colored mdl-js-button mdl-js-ripple-effect js-close-modal">Close</button>
+  </div>
+</article>
