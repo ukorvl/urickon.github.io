@@ -436,7 +436,7 @@ button:hover, button:focus {
 }
 
 input, textarea {outline:none;}
-input, textarea ::selection { background: #151515; }
+input, textarea::selection { background: #151515; }
 input:active, textarea:active, button:active {outline:none;}
 :focus {outline:none;}
 
