@@ -10,7 +10,11 @@
     <span class="comment__date">
       {%- if include.date -%}
         •
-        <a href="#{{ comment_id}}" title="Permalink to this comment">
+        <a
+        href="#{{ comment_id}}"
+        title="Permalink to this comment"
+        onclick="return window.scrollBy(0, -74);"
+        >
         {{- include.date | date:"%B %eth, %Y %H:%M" -}}
         </a>
       {%- endif -%}
