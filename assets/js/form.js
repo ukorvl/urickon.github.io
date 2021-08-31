@@ -39,4 +39,9 @@ if (form.attachEvent) {
   form.attachEvent("submit", processForm);
 } else {
   form.addEventListener("submit", processForm);
+};
+
+function correctPermalink () {
+  window.scrollBy(0, -74);
+  console.log('correctPermalink');
 }

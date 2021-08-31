@@ -13,7 +13,7 @@
         <a
         href="#{{ comment_id}}"
         title="Permalink to this comment"
-        onclick="return window.scrollBy(0, -74);"
+        onclick="correctPermalink"
         >
         {{- include.date | date:"%B %eth, %Y %H:%M" -}}
         </a>
