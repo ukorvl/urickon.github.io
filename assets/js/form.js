@@ -23,10 +23,6 @@ inputs.forEach(node => {
 })
 
 submitButton.addEventListener('click', (e) => {
-  if (processingRequest) {
-    e.preventDefault();
-    return;
-  }
   inputs.forEach(input => !input.value && e.preventDefault());
 });
 
@@ -35,7 +31,6 @@ submitButton.addEventListener('click', (e) => {
 function processForm(e) {
   console.log('submit');
   submitButton.classList.add('button-disabled')
-  // processingRequest = true;
   // inputs.forEach(input => input.value = '')
 };
 

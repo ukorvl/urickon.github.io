@@ -1,4 +1,4 @@
-const addComment = {
+var addComment = {
   /**
    * Moves form.
    * @param {*} commId - the id attribute of the comment replied to (e.g., "comment-10").
