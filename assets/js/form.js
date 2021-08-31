@@ -43,7 +43,7 @@ if (form.attachEvent) {
 
 function correctPermalink () {
   setTimeout(() => {
-    window.scrollBy(0, -74);
+    (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight && window.scrollBy(0, -74);
     console.log('correctPermalink');
-  }, 1000)
+  }, 0)
 }
