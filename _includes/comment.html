@@ -11,9 +11,9 @@
       {%- if include.date -%}
         •
         <a
-        href="#{{ comment_id}}"
-        title="Permalink to this comment"
-        onclick="correctPermalink"
+          href="#{{ comment_id}}"
+          title="Permalink to this comment"
+          onclick="correctPermalink(); return"
         >
         {{- include.date | date:"%B %eth, %Y %H:%M" -}}
         </a>
