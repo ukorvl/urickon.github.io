@@ -25,7 +25,13 @@
 </article>
 {% else %}
     <div class="comment__meta">
-      <a rel="nofollow" class="comment__reply-link" onclick="return addComment.moveForm('{{ comment_id }}', 'respond', '{{ page.slug }}', '{{ include.uid }}')">↪&#xFE0E; Reply to {{ include.name }}</a>
+      <a
+        rel="nofollow"
+        class="comment__reply-link"
+        onclick="return addComment.moveForm('{{ comment_id }}', 'respond', '{{ page.slug }}', '{{ include.uid }}')"
+      >
+        ↪&#xFE0E; Reply
+      </a>
     </div>
 </article>
 
@@ -40,5 +46,5 @@
     {% include comment.html is_reply=true uid=uid email=email name=name url=url date=date message=message %}
   {% endfor %}
 
-  <hr style="border-top: 1px solid #ccc; background: transparent; margin-bottom: 10px;">
+  <hr style="border-top: 1px solid #907F8F; background: transparent; margin-bottom: 10px;">
 {% endif %}

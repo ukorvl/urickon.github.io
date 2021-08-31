@@ -41,9 +41,9 @@
                     <div class="bs-component-blog bs-component">
                     <div class="jumbotron-blog jumbotron">
                     <div class="form-title">
-                        <h5>Please, leave your comment here</h5>
+                        <h5>Comments section</h5>
                     </div>
-                    <form
+                    <!-- <form
                         method="post"
                         action="{{ site.staticman_url }}"
                         class="form-for-comments"
@@ -89,7 +89,7 @@
                         <div class="button-box">
                             <button id="sbtBtn" type="submit">Go!</button>
                         </div>
-                    </form>
+                    </form> -->
                     <div class="comments">
                         
                             {% include comments.html %}
@@ -106,6 +106,7 @@
 
         </div>
         <script src="{{site.baseurl}}/assets/js/form.js"></script>
+        <script src="{{site.baseurl}}/assets/js/moveForm.js"></script>
         <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
         <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
     </body>

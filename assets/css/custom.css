@@ -495,6 +495,9 @@ input::placeholder, textarea::placeholder {
 .footer__list-container > div {
     margin: 4px 16px;
 }
+.comment-form-title {
+    margin-bottom: 32px;
+}
 
 @media (max-width: 767px) {
     #footer {
