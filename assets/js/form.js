@@ -35,7 +35,7 @@ submitButton.addEventListener('click', (e) => {
 function processForm(e) {
   console.log('submit');
   submitButton.classList.add('button-disabled')
-  processingRequest = true;
+  // processingRequest = true;
   // inputs.forEach(input => input.value = '')
 };
 
