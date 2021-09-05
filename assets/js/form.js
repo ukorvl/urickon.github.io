@@ -12,13 +12,9 @@ let processingRequest = false; // true during request submitting
 let error = false; // true if submitting vas unsuccesfull
 
 const checkInputs = () => {
-  [...inputs].forEach(input => {
-    if (input.value === '') {
-      alertEmptyInput(input)
-      submitButton.classList.add('button-disabled')
-    }
-  })
-  if (![...inputs].some(input => input.value === '')) submitButton.classList.remove('button-disabled');
+  [...inputs].some(input => input.value === '')
+    ? submitButton.classList.add('button-disabled')
+    : submitButton.classList.remove('button-disabled');
 }
 checkInputs();
 
@@ -68,12 +64,4 @@ function correctPermalink () {
     (window.innerHeight + window.pageYOffset) < document.body.offsetHeight && window.scrollBy(0, -76);
     console.log('correctPermalink');
   }, 0)
-}
-
-/** Corrects window scroll offset after clicking on permalink. */
-const alertEmptyInput = (input) => {
-  input.classList.add('alert-empty-item')
-  setTimeout(() => {
-    input.classList.remove('alert-empty-item')
-  }, 200);
 }
