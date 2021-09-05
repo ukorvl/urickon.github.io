@@ -536,3 +536,7 @@ input::placeholder, textarea::placeholder {
 body, html {
     box-sizing: border-box;
 }
+
+.alert-empty-item {
+    color: red;
+}
