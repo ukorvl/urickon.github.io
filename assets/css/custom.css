@@ -536,26 +536,3 @@ input::placeholder, textarea::placeholder {
 body, html {
     box-sizing: border-box;
 }
-
-/* custom scroll */
-html::-webkit-scrollbar-track
-{
-	background-color: #907F8F;
-}
-html::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #222222;
-}
-html::-webkit-scrollbar-thumb
-{
-	background-color: #343434;
-}
-html::-webkit-scrollbar-thumb:hover
-{
-	background-color: #151515;
-}
-/*
-Author:MANOJ M;
-Link :https://codepen.io/manoj-m-01
-*/
