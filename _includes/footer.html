@@ -1,15 +1,17 @@
 <footer id="footer" class="footer{% if include.post %} footer-blog{% endif %}">
-    <div class="row-blog">
-        <div class="footer__list-container">
-            <div>
+    <div>
+        <div class="d-flex footer__list-container">
+            <div class="mt-1 mb-1 ml-4 mr-4">
                 <a href="#top">Back to top</a>
             </div>			  
             {% for item in site.contact %}
-            <div>
+            <div class="mt-1 mb-1 ml-4 mr-4">
                 <a href="{{ item.link }}">{{ item.title }}</a>
             </div>
             {% endfor %}
         </div>
-            <!--<p>&copy <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">CC BY-NC-ND 4.0 International license</a> by {{ site.author }}</p>-->
+        <div class="text-center">
+            <!-- <p>&copy <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">CC BY-NC-ND 4.0 International license</a> by {{ site.author }}</p> -->
+        </div>
     </div>
 </footer>

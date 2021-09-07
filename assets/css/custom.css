@@ -151,19 +151,6 @@ pre {
     margin-bottom: 1rem
 }
 
-.bs-component .modal {
-    position: relative;
-    top: auto;
-    right: auto;
-    left: auto;
-    bottom: auto;
-    z-index: 1;
-    display: block
-}
-
-.bs-component .modal-dialog {
-    width: 90%
-}
 
 .bs-component .popover {
     position: relative;
@@ -356,16 +343,16 @@ pre {
     right: 0px;
 }
 
-.comment-textfield {
-    width: 100%;
-    margin-right: 16px;
+
+/* 08.2021 add comments */
+body, html {
+    box-sizing: border-box;
+}
+.form-control {
     background: #343434;
     transition: 0.2s;
-    border-radius: 4px;
-    border: none;
     color: #907F8F;
 }
-
 label {
     width: 80%;
     font-size: 100%;
@@ -374,37 +361,10 @@ label {
 label:focus-within {
     color: #ffffff;
 }
-.form-title {
-    margin-left: 10%;
-}
-
-.comments-input-container {
-    display: flex;
-    justify-content: center;
-}
-
-textarea.comment-textfield {
+textarea.form-control {
     height: 100px;
     resize: none;
 }
-
-.comment-textfield:hover,
-.comment-textfield:focus
-{
-    box-shadow:0 0 0.75em #eaf1f1;
-}
-
-.button-box > button:hover
-{
-    box-shadow:0 0 0.75em #907F8F;
-}
-
-.button-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .navbar-brand:hover {
     background: #907F8F;
 }
@@ -412,64 +372,20 @@ textarea.comment-textfield {
     padding: 10px!important;
     transition: none!important;
 }
-
-.button-box > button {
-    width: 150px;
-    margin-top: 16px;
-    background: #d1d1d1;
-    transition: 0.2s;
-    border: none;
-    border-radius: 4px;
+.form-control::selection {
+    background: #907F8F;
 }
-
-.button-box > button:hover {
-    background: #F5F2F1;
-}
-
-button:hover, button:focus {
-    outline: none;
-}
-
-.form-for-comments {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-input, textarea {outline:none;}
-textarea::selection { background: #151515; }
-input::selection { background: #151515; }
-input:active, textarea:active, button:active {outline:none;}
-:focus {outline:none;}
-
 ::selection {
 	background: #343434;
-}
-
-.button-disabled {
-    background: #907F8F!important;
 }
 .row-blog {
     justify-content: center;
     width: 100%;
 }
-.col-blog {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
 .description-blog {
     width: 80%;
     display: flex;
     justify-content: flex-start;
-}
-.lead-blog, .col-blog > h3 {
-    color:#eaf1f1;
-}
-.comments {
-    margin-top: 48px;
-}
-.page-header-blog {
-    margin: 24px 0;
 }
 input::placeholder, textarea::placeholder {
     font-size: 100%;
@@ -479,30 +395,11 @@ input::placeholder, textarea::placeholder {
     width: 80%;
     padding: 2rem 2rem;
 }
-.container-blog {
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-}
-.page-header-blog {
-    padding-bottom: 0;
-}
 .container-nav,
 .navbar-blog {
     width: 100%;
     max-width: 3000px;
 }
-.footer__list-container {
-    display: flex;
-}
-.footer__list-container > div {
-    margin: 4px 16px;
-}
-.comment-form-title {
-    margin-bottom: 12px;
-    margin-left: 10%;
-}
-
 @media (max-width: 767px) {
     #footer {
         width: 100%;
@@ -531,12 +428,4 @@ input::placeholder, textarea::placeholder {
         display: flex;
         justify-content: center;
     }
-}
-
-body, html {
-    box-sizing: border-box;
-}
-
-.alert-empty-item {
-    color: red;
 }
