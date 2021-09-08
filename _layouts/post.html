@@ -4,35 +4,33 @@
     <body>
         {% include header.html %}
         <div class="container d-flex flex-column align-items-center">
-            <div class="pb-4 pt-4">
+            <div class="pb-4 pt-4 w-100">
                 <h2>{{ page.title }}</h2>
             </div>
-            <div class="row-blog">
-                <div class="d-flex flex-column align-items-center">
+            <div class="row w-75">
+                <div class="d-flex flex-column align-items-start">
                     {% if page.description %}
-                    <div class="description-blog">
+                    <div class="d-flex justify-content-center">
                         <p class="lead lead-blog">{{ page.description }}</p>
                     </div>
                     {% endif %}
-                    <div class="description-blog">
+                    <div class="d-flex justify-content-start">
                         <p class="lead lead-blog">Written by {{ page.author }} on {{ page.date | date_to_string }}</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="bs-component-blog bs-component">
-                        <div class="jumbotron-blog jumbotron">		
-                            <p class="lead">{{ content }}</p>
-                        </div>
+            <div class="row w-75">
+                <div class="bs-component">
+                    <div class="jumbotron">		
+                        <p class="lead">{{ content }}</p>
                     </div>
                 </div>
             </div>
             {% if page.comments == true %}
-            <div class="row-blog">
-                <div class="bs-component-blog bs-component">
-                    <div class="jumbotron-blog jumbotron">
-                        <div class="mt-12">
+            <div class="row w-75">
+                <div class="bs-component w-100">
+                    <div class="jumbotron">
+                        <div class="mt-12 w-100">
                             {% include comments.html %}
                         </div>
                     </div>
@@ -48,22 +46,22 @@
             role="dialog"
             aria-hidden="true"
         >
-        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-            <div class="modal-content">
-            <div class="modal-body">
-                <div id="success-message" class="flex-column">
-                    <h5>Your comment was successfully submitted!</h5>
-                    <p>It will be published after moderation.</p>
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="success-message" class="flex-column">
+                            <h5>Your comment was successfully submitted!</h5>
+                            <p>It will be published after moderation.</p>
+                        </div>
+                        <div id="error-message" class="flex-column">
+                            <p>An error occured during adding your comment!</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="hideModal()">Ok</button>
+                    </div>
                 </div>
-                <div id="error-message" class="flex-column">
-                    <p>An error occured during adding your comment!</p>
-                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" onclick="hideModal()">Ok</button>
-            </div>
-            </div>
-        </div>
         </div> 
         <script src="{{site.baseurl}}/assets/js/form.js"></script>
         <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>

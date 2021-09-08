@@ -344,7 +344,7 @@ pre {
 }
 
 
-/* 08.2021 add comments */
+/* add comments */
 body, html {
     box-sizing: border-box;
 }
@@ -365,35 +365,15 @@ textarea.form-control {
     height: 100px;
     resize: none;
 }
-.navbar-brand:hover {
-    background: #907F8F;
-}
-.navbar-brand {
-    padding: 10px!important;
-    transition: none!important;
-}
 .form-control::selection {
     background: #907F8F;
 }
 ::selection {
 	background: #343434;
 }
-.row-blog {
-    justify-content: center;
-    width: 100%;
-}
-.description-blog {
-    width: 80%;
-    display: flex;
-    justify-content: flex-start;
-}
 input::placeholder, textarea::placeholder {
     font-size: 100%;
     color: #907F8F;
-}
-.jumbotron-blog {
-    width: 80%;
-    padding: 2rem 2rem;
 }
 .container-nav,
 .navbar-blog {
@@ -410,9 +390,6 @@ input::placeholder, textarea::placeholder {
     }
     .container-nav {
         margin: 0 auto!important;
-    }
-    .jumbotron-blog {
-        width: 100%;
     }
     label {
         width: 100%;
