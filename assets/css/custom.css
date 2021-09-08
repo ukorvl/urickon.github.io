@@ -355,15 +355,10 @@ body, html {
 }
 label {
     width: 80%;
-    font-size: 100%;
     transition: 0.2s;
 }
 label:focus-within {
     color: #ffffff;
-}
-textarea.form-control {
-    height: 100px;
-    resize: none;
 }
 .form-control::selection {
     background: #907F8F;
@@ -374,11 +369,6 @@ textarea.form-control {
 input::placeholder, textarea::placeholder {
     font-size: 100%;
     color: #907F8F;
-}
-.container-nav,
-.navbar-blog {
-    width: 100%;
-    max-width: 3000px;
 }
 @media (max-width: 767px) {
     #footer {
