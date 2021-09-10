@@ -108,3 +108,8 @@ function setProcessingRequest (isProcessing) {
     processingRequest = false;
   }
 }
+
+/** moves form when replying */
+function moveForm (comment_id, respond, skug, url) {
+  console.log(comment_id, respond, skug, url);
+}

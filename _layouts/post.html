@@ -10,11 +10,11 @@
             <div class="row w-75">
                 <div class="d-flex flex-column align-items-start">
                     {% if page.description %}
-                    <div class="d-flex justify-content-center">
+                    <div>
                         <p class="lead">{{ page.description }}</p>
                     </div>
                     {% endif %}
-                    <div class="d-flex justify-content-start">
+                    <div>
                         <p class="lead">Written by {{ page.author }} on {{ page.date | date_to_string }}</p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             </div>
             {% if page.comments == true %}
             <div class="row w-75">
-                <div class="bs-component w-100">
+                <div class="bs-component">
                     <div class="jumbotron">
                         <div class="mt-12 w-100">
                             {% include comments.html %}

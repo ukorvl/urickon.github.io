@@ -1,6 +1,6 @@
 {%- capture article_class %}js-comment comment{% if include.name == site.author.name %} admin{% endif %}{% if include.is_reply %} child{% endif %}{% endcapture %}
 {% assign comment_id = include.uid | prepend: 'comment-' %}
-<article id="{{ comment_id }}" class="{{ article_class }} pt-4 pb-4" uid="{{ include.uid }}">
+<article id="{{ comment_id }}" class="{{ article_class }} pt-2 pb-2" uid="{{ include.uid }}">
 
   <div class="comment__author">
     {% if include.name == site.author.name %} 
@@ -21,7 +21,10 @@
     </span>
   </div>
 
-  <div class="comment__body">
+  <div
+    class="comment__body"
+    style="overflow-wrap:break-word;word-break: break-word;hyphens: auto;"
+  >
     {{ include.message | strip_html | markdownify }}
   </div>
 
@@ -31,7 +34,8 @@
     <!-- <div class="comment__meta">
       <a
         rel="nofollow"
-        class="comment__reply-link"
+        href="#{{ comment_id}}"
+        style="text-decoration:none;"
         onclick="return moveForm('{{ comment_id }}', 'respond', '{{ page.slug }}', '{{ include.uid }}')"
       >
         ↪&#xFE0E; Reply

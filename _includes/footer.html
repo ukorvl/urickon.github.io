@@ -1,11 +1,11 @@
-<footer id="footer" class="footer{% if include.post %} footer-blog{% endif %}">
+<footer id="footer" class="w-100">
     <div>
-        <div class="d-flex footer__list-container">
-            <div class="mt-1 mb-1 ml-4 mr-4">
+        <div class="justify-content-center align-content-center flex-column flex-md-row flex-lg-row flex-xl-row d-flex">
+            <div class="mt-1 mb-1 ml-4 mr-4 d-flex justify-content-center">
                 <a href="#top">Back to top</a>
             </div>			  
             {% for item in site.contact %}
-            <div class="mt-1 mb-1 ml-4 mr-4">
+            <div class="mt-1 mb-1 ml-4 mr-4 d-flex justify-content-center">
                 <a href="{{ item.link }}">{{ item.title }}</a>
             </div>
             {% endfor %}

@@ -370,16 +370,6 @@ input::placeholder, textarea::placeholder {
     color: #907F8F;
 }
 @media (max-width: 767px) {
-    #footer {
-        width: 100%;
-        margin: 0 0 2em;
-    }
-    .footer-blog {
-        width: 80%;
-    }
-    .container-nav {
-        margin: 0 auto!important;
-    }
     label {
         width: 100%;
     }
