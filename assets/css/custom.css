@@ -344,9 +344,6 @@ pre {
 }
 
 /* add comments */
-body, html {
-    box-sizing: border-box;
-}
 .form-control {
     background: #343434;
     transition: 0.2s;
@@ -368,20 +365,4 @@ label:focus-within {
 input::placeholder, textarea::placeholder {
     font-size: 100%;
     color: #907F8F;
-}
-@media (max-width: 767px) {
-    label {
-        width: 100%;
-    }
-    body {
-        padding-top: 90px;
-    }
-    .footer__list-container {
-        flex-direction: column;
-    }
-    .footer__list-container > div {
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-    }
 }

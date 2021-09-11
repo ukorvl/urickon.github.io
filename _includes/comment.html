@@ -1,6 +1,6 @@
 {%- capture article_class %}js-comment comment{% if include.name == site.author.name %} admin{% endif %}{% if include.is_reply %} child{% endif %}{% endcapture %}
 {% assign comment_id = include.uid | prepend: 'comment-' %}
-<article id="{{ comment_id }}" class="{{ article_class }} pt-2 pb-2" uid="{{ include.uid }}">
+<div id="{{ comment_id }}" class="{{ article_class }} pt-3 pb-2" uid="{{ include.uid }}">
 
   <div class="comment__author">
     {% if include.name == site.author.name %} 
@@ -29,7 +29,7 @@
   </div>
 
 {% if include.is_reply %}
-</article>
+</div>
 {% else %}
     <!-- <div class="comment__meta">
       <a
@@ -41,7 +41,7 @@
         ↪&#xFE0E; Reply
       </a>
     </div>  -->
-</article>
+  </div>
 
   {%- capture this_uid %}{{ include.uid }}{% endcapture %}
   {%- assign replies = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to_uid == this_uid' %}
@@ -54,5 +54,5 @@
     {% include comment.html is_reply=true uid=uid email=email name=name url=url date=date message=message %}
   {% endfor %}
 
-  <div class="dropdown-divider" />
+  <div class="dropdown-divider"></div>
 {% endif %}
