@@ -31,16 +31,16 @@
 {% if include.is_reply %}
 </div>
 {% else %}
-    <!-- <div class="comment__meta">
+    <!-- <div class="comment__meta pl-4">
       <a
         rel="nofollow"
-        href="#{{ comment_id}}"
+        href="#{{ comment_id }}"
         style="text-decoration:none;"
         onclick="return moveForm('{{ comment_id }}', 'respond', '{{ page.slug }}', '{{ include.uid }}')"
       >
-        ↪&#xFE0E; Reply
+        ↪&#xFE0E; Reply to {{ include.name }}
       </a>
-    </div>  -->
+    </div> -->
   </div>
 
   {%- capture this_uid %}{{ include.uid }}{% endcapture %}
