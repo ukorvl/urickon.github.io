@@ -65,7 +65,6 @@ async function processForm () {
   });
   XHR.open("POST", "{{ site.staticman_url }}", true);
   XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  XHR.setRequestHeader('Access-Control-Allow-Origin', '*');
   XHR.send(body);
 };
 
