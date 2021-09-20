@@ -16,7 +16,7 @@ const
 let processingRequest = false;
 
 const checkInputs = () => {
-  [...inputs].some(input => input.value === '')
+  [...inputs].some(input => input.value.trim() === '')
     ? submitButton.setAttribute('disabled', '')
     : submitButton.removeAttribute('disabled');
 }
@@ -33,7 +33,7 @@ inputs.forEach(node => {
 
 form.addEventListener( "submit", function ( event ) {
   event.preventDefault();
-  if ([...inputs].some(input => input.value === '') || processingRequest) { return; }
+  if ([...inputs].some(input => input.value.trim() === '') || processingRequest) { return; }
   processForm();
 } );
 
@@ -50,9 +50,14 @@ async function processForm () {
   
   const XHR = new XMLHttpRequest();
   XHR.addEventListener( "load", function(event) {
-    inputs.forEach(input => input.value = '');
-    setProcessingRequest(false);
-    showModal('success')
+    if (XHR.status != 200) {
+      setProcessingRequest(false);
+      showModal('error');
+    } else {
+      inputs.forEach(input => input.value = '');
+      setProcessingRequest(false);
+      showModal('success');
+    }
   });
   XHR.addEventListener( "error", function(event) {
     setProcessingRequest(false);
